@@ -12,7 +12,7 @@ app.get('/api', (req, res) => {
 	const data = {
 		slack_name: slack_name,
 		current_day: moment().format('dddd'),
-		utc_tIme: moment().format('YYYY-MM-DDTHH:mm:ss\\Z'),
+		utc_time: moment().format('YYYY-MM-DDTHH:mm:ss\\Z'),
 		track: track,
 		github_file_url:
 			'https://github.com/sundaygbenga/hng-backend-internship-task/blob/main/endpoint.js',
