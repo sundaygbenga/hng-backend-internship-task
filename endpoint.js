@@ -8,17 +8,17 @@ const app = express();
 app.get('/api', (req, res) => {
 	const slack_name = req.query.slack_name;
 	const track = req.query.track;
-	// const slack_name = 'Sunfliz';
-	// const track_name = 'Backend';
+
 	const data = {
-		slackName: slack_name,
-		currentDay: moment().format('dddd'),
-		utcTIme: moment().format('YYYY-MM-DDTHH:mm:ssZ'),
+		slack_name: slack_name,
+		current_day: moment().format('dddd'),
+		utc_tIme: moment().format('YYYY-MM-DDTHH:mm:ss\\Z'),
 		track: track,
-		githubFileUrl:
-			'https://github.com/sudaygbenga/hng-backend-internship-task/endpoint.js',
-		githubRepoUrl: 'https://github.com/sudaygbenga/hng-backend-internship-task',
-		statusCode: 200,
+		github_file_url:
+			'https://github.com/sundaygbenga/hng-backend-internship-task/blob/main/endpoint.js',
+		github_repo_url:
+			'https://github.com/sundaygbenga/hng-backend-internship-task',
+		status_code: 200,
 	};
 
 	res.json(data);
